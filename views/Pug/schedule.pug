@@ -1,0 +1,32 @@
+extends nav
+append head 
+		h1 <i>Schedule</i>
+		div(class="db-table")
+			div(id="projnumbercolumn")
+				h2 Project Number
+				each element in schProNumber
+					p
+						a(href='/projects/'+ element) #{element}
+			div(id="schednumbercolumn")
+				h2 Schedule Number
+				each num in schNumber
+					p 
+						a(href='/schedule/'+ num) #{num}
+			div(id="scheddatecolumn")
+				h2 Schedule Date
+				each date in schDate
+					p #{date}
+			div(class="starttimecolumn")
+				h2 Schedule Start Time
+				each start in schStartTime
+					p #{start}
+			div(class="endtimecolumn")
+				h2 Schedule End Time
+				each end in schEndTime
+					p #{end}
+			div(class="typecolumn")
+				h2 Schedule Type
+				each discipline in schType
+					p #{discipline}		
+		form(action="/newschedule" method="GET")
+			input(type="submit" value="Add Schedule")

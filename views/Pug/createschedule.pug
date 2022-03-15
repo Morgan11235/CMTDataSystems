@@ -1,0 +1,23 @@
+html
+	body
+		div(id="create-schedule-box")
+			form(action='/createschedule' method='POST')
+				label(for="projectNumber") Project Number: 	
+				input(name="projectNumber")
+				br 
+				label(for="scheduleNumber") Schedule Number: 				 
+				input(name="scheduleNumber") 
+				br
+				label(for="scheduleDate") Schedule Date: 	
+				input(name="scheduleDate") 
+				br
+				label(for="scheduleStartTime") Schedule Start Time: 
+				input(name="scheduleStartTime") 
+				br
+				label(for="scheduleEndTime") Schedule End Time: 
+				input(name="scheduleEndTime") 
+				br
+				label(for="scheduleType") Schedule Type: 				 
+				input(name="scheduleType")
+				br
+				input(type="submit" value="Add Schedule")

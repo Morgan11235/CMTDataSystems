@@ -1,0 +1,32 @@
+extends nav
+append head 
+		h1 <i>Projects</i>
+		div(class="db-table")
+			div(id="projnumbercolumn")
+				h2 Project Number
+				each element in proNumber
+					p
+						a(href='/projects/'+ element) #{element}
+			div(id="projnamecolumn")
+				h2 Project Name
+				each name in proName
+					p #{name}
+			div(id="projclientcolumn")
+				h2 Client
+				each client in proClient
+					p #{client}
+			div(class="projmanagercolumn")
+				h2 Project Manager
+				each manager in proManager
+					p #{manager}
+			div(class="projsegmentcolumn")
+				h2 Industry Segment
+				each segment in proSegment
+					p #{segment}
+		
+
+		form(action="/newproject" method="GET")
+			input(type="submit" value="Create Project" class="create-button")
+			
+			
+			

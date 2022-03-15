@@ -1,0 +1,63 @@
+html
+	body
+		form(action='/createsample', method='POST')
+			label(for="pickupList") Select Sample Pickup: 
+			select(name="pickupList")
+				each schedule in unassigned
+					option(value=schedule) #{schedule}
+			h2 Select Tests:
+			h3 Proctor
+			input(type="checkbox", name="proctor", value="proctor")
+			label(for="proctor")
+				select(name="proctorTestMethod")
+					option
+					option ASTM D1557
+					option ASTM D698
+					option AASHTO T180
+					option AASHTO T99
+					option FM-1 T180
+					option FM-1 T99
+			h3 Grain Size Analysis
+			input(type="checkbox", name="sieve", value="sieve")
+			label(for="sieve")
+				select(name="sieveTestMethod")
+					option
+					option ASTM D422
+					option ASTM C136
+					option AASHTO T27
+					option AASHTO T88
+					option FM-1 T27
+					option FM-1 T88
+			h3 Organic Content
+			input(type="checkbox", name="organics", value="organics")
+			label(for="organics")
+				select(name="organicsTestMethod")
+					option
+					option ASTM D2974
+					option AASHTO T267
+					option FM-1 T267
+			h3 Atterberg Limits
+			input(type="checkbox", name="atterbergs", value="atterbergs")
+			label(for="atterbergs")
+				select(name="atterbergsTestMethod")
+					option
+					option ASTM D4318
+					option AASHTO T89/T90
+					option FM-1 T89/T90
+			br
+			br
+			label(for="sampleDate") Sample Date: 
+			input(name="sampleDate")
+			br
+			label(for="sampleType") Sample Type: 
+			input(name="sampleType")
+			br
+			label(for="sampleMaterial") Sample Material: 
+			input(name="sampleMaterial")
+			br
+			label(for="sampleDescription") Sample Description 
+			textarea(name="sampleDescription")
+			br
+			br
+			input(type="submit", value="Save Sample")
+			

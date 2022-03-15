@@ -1,0 +1,23 @@
+html
+	body
+		div(id="create-project-box")
+			form(action='/createproject' method='POST')
+				label(for="projectNumber") Project Number:	
+				input(name="projectNumber")
+				br 
+				label(for="projectName") Project Name:				 
+				input(name="projectName") 
+				br
+				label(for="projectClient") Client:	
+				input(name="projectClient") 
+				br
+				label(for="projectOwner") Contract Owner:				 
+				input(name="projectowner") 
+				br
+				label(for="projectManager") Project Manager:	
+				input(name="projectManager") 
+				br
+				label(for="projectSegment") Segment:				 
+				input(name="projectSegment")
+				br
+				input(type="submit" value="Create Project")
